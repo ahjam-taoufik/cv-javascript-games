@@ -15,8 +15,23 @@ let state={
 };
 
 const jouerCase=(e)=>{
-    console.log(e.target.id);
+    let idcase=e.target.id;
+    if(state[idcase]!== 0) return
 
+
+    state[idcase]=state.joueurEnCours
+    if(state.joueurEnCours===1){
+        e.target.innerHTML='X';
+        state.joueurEnCours=2
+        joueur.innerHTML='Joueur 2';
+    }else{
+        e.target.innerHTML='O';
+        state.joueurEnCours=1
+        joueur.innerHTML='Joueur 1';
+     }   
+    
+
+     console.log(state);
 }
 
 cases.forEach(el=>{
