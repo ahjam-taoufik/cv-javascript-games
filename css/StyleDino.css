@@ -17,14 +17,17 @@
   background-color: #9b1426;
   position: absolute;
   top: 150px;
-  animation: jump 500ms infinite;
+}
+
+.animate {
+  animation: jump 500ms;
 }
 
 
 @keyframes jump {
   0% {top: 150px;}
-  /* 30% {top: 130px;} */
-  70% {top: 110px;}
+  30% {top: 100px;}
+  70% {top: 90px;}
    
 }
 
